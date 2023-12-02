@@ -17,7 +17,7 @@ def toggleLikeSong():
 runkey = ']' # if you want a different hotkey you can change this
 # TODO add prompt on script launch to get hotkey user wants to use.
 
-keyboard.add_hotkey(runkey, likeSong)
+keyboard.add_hotkey(runkey, toggleLikeSong)
 
 keyboard.wait('[') # key you want to press to stop the script.
 # TODO add prompt for this as well.
