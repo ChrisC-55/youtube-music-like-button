@@ -3,10 +3,17 @@ import pyautogui
 import keyboard
 
 # default hotkey for toggling like button on YouTube music is shift + =.  If that changes, this will need updated.
+
+windows = gw.getAllTitles()
+
+for title in windows:
+    if 'Firefox' in title: # if Firefox is not being used can change this name.  
+        musicWindow = title
+
 def toggleLikeSong(): 
     title = gw.getActiveWindowTitle()
 
-    gw.getWindowsWithTitle('Firefox')[0].activate() # if Firefox is not being used can change this name.  
+    gw.getWindowsWithTitle(musicWindow)[0].activate() 
     # TODO add prompt on script launch to get browser name app will be running in.
     # TODO implmement tab switching so it can find the correct tab if not already on that tab.
 
